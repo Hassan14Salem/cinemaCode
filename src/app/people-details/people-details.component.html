@@ -1,0 +1,24 @@
+<section class="p-5 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12" >
+             <div class="d-flex">
+                <div class="col-sm-5">
+                    <div>
+<img [src]="baseSrc+getPeople.profile_path" class="w-100" alt="Images">
+                    </div>
+                </div>
+                <div class="col-sm-7 ps-3  lh-lg">
+                    <h4>Name :  {{getPeople.name}}</h4>
+                    <h4>Date OF Birth :  {{getPeople.birthday}}</h4>
+                    <h4>Place OF Birth :  {{getPeople.place_of_birth}}</h4>
+                    <h4>popularity :  {{getPeople.popularity}}</h4>
+                    <h4>Department :  {{getPeople.known_for_department}}</h4>
+                    <h4>About</h4>
+                    <h6 class="lh-lg">{{getPeople.biography}}</h6>
+                </div>
+             </div>
+            </div>
+        </div>
+    </div>
+</section> 

@@ -1,0 +1,14 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let tv of getTV">
+               <a [routerLink]="['/itemsDetails', tv.media_type, tv.id]">
+                <div>
+                    <img src="{{baseSrc+tv.poster_path}}" class="w-100" alt="images of tv shows">
+                    <h2>{{tv.name |lessName}}</h2>
+                </div>
+               </a>
+            </div>
+        </div>
+    </div>
+</section>

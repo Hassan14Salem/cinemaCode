@@ -1,0 +1,14 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let person of getPerson">
+          <a [routerLink]="['/peopledetails',person.media_type , person.id]">
+            <div>
+                <img src="{{baseSrc+person.profile_path}}" class="w-100" alt="Actors Images">
+                <h2>{{person.original_name}}</h2>
+                                </div>
+          </a>
+            </div>
+        </div>
+    </div>
+</section>

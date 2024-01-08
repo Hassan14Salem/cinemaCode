@@ -1,0 +1,35 @@
+<section class="p-5" >
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            <div class="d-flex">
+                <div class="col-sm-5">
+                    <img [src]="baseSrc+getMovieDetails.poster_path" class="w-100" alt="moviesImages">
+                </div>
+                <div class="col-sm-7 ps-3  lh-lg">
+                <h4>Name Of Movie : {{getMovieDetails.original_title}}</h4>
+                <h4 class="pt-3">Description</h4>
+                {{getMovieDetails.overview}}
+                <h4 class="pt-3">Producted By :</h4>
+                <div *ngFor="let prod of getMovieDetails.production_companies">
+                    <h6 *ngIf="prod.name">Name Of Company :{{prod.name}}</h6>
+                </div>
+                {{getMovieDetails.production_companies.name}}
+                {{getMovieDetails.production_countries.name}}
+                <h4 class="pt-3">Release date : {{getMovieDetails.release_date}}</h4>
+                <h4 class="pt-3">Run time : {{getMovieDetails.runtime}}</h4>
+                <h4 class="pt-3">Spoken Languages :</h4>
+                <div *ngFor="let lang of getMovieDetails.spoken_languages">
+                    <h6 *ngIf="lang.name"><li>{{lang.name}}</li></h6>
+                </div>
+                <h6 class="pt-3">Vote Average : {{getMovieDetails.vote_average}}</h6>
+                <h6 class="pt-3">Vote Count : {{getMovieDetails.vote_count}}</h6>
+
+                </div>
+                
+            </div>
+
+            </div>
+        </div>
+    </div>
+</section>

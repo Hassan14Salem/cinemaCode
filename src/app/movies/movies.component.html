@@ -1,0 +1,15 @@
+<section class="p-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3" *ngFor="let movie of getMovie">
+                <a [routerLink]="['/itemsDetails' ,   movie.media_type , movie.id]">
+                    <div >
+                        <img src="{{baseSrc+movie.poster_path}}" class="w-100" alt="">
+                        <h2>{{movie.title|lessName}}</h2>
+                                    </div>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+    </section>
